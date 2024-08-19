@@ -35,7 +35,7 @@ const Home = () => {
 
   const PopularMovieList = () => {
     if (notFound) {
-      return <h2 className="text-center mt-5">Movie not found</h2>; // Display "Movie not found" message
+      return <h2 className="text-center mt-5" style={{ width: "100%" }}>Movie not found</h2>;
     }
 
     return (

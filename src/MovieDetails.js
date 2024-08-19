@@ -31,7 +31,8 @@ const MovieDetails = () => {
           />
         </div>
         <div className="movie-info">
-          <h1 className="movie-title">{movie.title} <span className="movie-year">({new Date(movie.release_date).getFullYear()})</span></h1>
+          <h1 className="movie-title">{movie.title}</h1>
+          <span className="movie-year">{new Date(movie.release_date).getFullYear()}</span>
           <div className="movie-metadata">
           <span className="movie-rating">{Math.round(movie.vote_average * 10)}%</span>
             <span className="movie-release-date">{new Date(movie.release_date).toLocaleDateString()}</span>

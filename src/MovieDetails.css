@@ -1,38 +1,33 @@
 .movie-details-page {
-    background-color: #0c1e2c;
+    background-color: cornflowerblue;
     color: white;
-    padding: 5px;
-    min-height: 100vh;
+    padding: 25px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;  
     position: relative; 
   }
   
   .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    background-color: black;
     z-index: 1000;
   }
   
   .movie-details-content {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    background-color: #1c3c4f;
-    border-radius: 15px;
     overflow: hidden;
   }
   
   .poster-container {
     flex: 1;
-    max-width: 300px;
+    max-width: fit-content;
   }
   
   .movie-poster {
     width: 100%;
-    border-radius: 15px 0 0 15px;
+    border-radius: 8px 8px 8px 8px;
   }
   
   .movie-info {

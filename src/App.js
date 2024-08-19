@@ -63,7 +63,8 @@ const Home = () => {
   return (
     <div className="App text-center">
       <header className="App-header">
-        <div className="header-background"></div>
+        <div className='parent'>
+        <div className="header-section">
         <div className="container">
           <h1>Selamat datang</h1>
           <p>Millions of movies, TV shows and people to discover. Explore now.</p>
@@ -84,12 +85,17 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
         <div className="trending-section">
           <h2>Trending</h2>
           <div className="scroll-container">
             <PopularMovieList />
           </div>
         </div>
+
+        </div>
+  
       </header>
     </div>
   );

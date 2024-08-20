@@ -1,149 +1,143 @@
 .movie-details-page {
-    background-color: #0c1e2c;
-    color: white;
-    padding: 5px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; 
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-  
-  .movie-details-content {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    background-color: #1c3c4f;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  
-  .poster-container {
-    flex: 1;
-    max-width: 300px;
-  }
-  
-  .movie-poster {
-    width: 100%;
-    border-radius: 15px 0 0 15px;
-  }
-  
-  .movie-info {
-    flex: 2;
-    padding: 20px; /* Existing padding */
-    margin: 10px; /* Added margin */
-    line-height: 1.6; /* Increase line height for better readability */
-  }
-  
-  .movie-summary {
-    margin: 20px 0;
-    padding: 15px; /* Adding padding inside the summary block */
-    background-color: rgba(255, 255, 255, 0.05); /* Light background color to separate text from the rest of the box */
-    border-radius: 8px; /* So the summary text block has rounded edges */
-  }
-  
-  .movie-metadata {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 20px 0; /* Increased margin */
-  }
-  
-  .movie-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px; /* Added space below the title */
-  }
-  
-  .movie-rating {
-    background-color: #79d70f;
-    color: black;
-    padding: 10px 15px; /* Increased padding for the rating circle */
-    border-radius: 50%;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px; /* Adding space below the rating */
-  }
-  
-  
-  .movie-release-date,
-  .movie-genre,
-  .movie-duration {
-    font-size: 1rem;
-  }
-  
-  .movie-summary {
-    margin: 20px 0;
-  }
-  
-  .movie-credits {
-    margin-top: 20px;
-  }
-  
-  .movie-credits h4 {
-    margin: 5px 0;
-  }
-  
-  .movie-credits p {
-    margin: 0;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 992px) {
-    .movie-details-page {
-        padding: 15px;
-      }
-    .movie-details-content {
-      flex-direction: column;
-      align-items: center
-    }
-  
-    .poster-container {
-      max-width: 100%;
-      text-align: center;
-    }
-  
-    .movie-poster {
-      border-radius: 15px 15px 0 0;
-    }
-  
-    .movie-info {
-      padding: 20px 0;
-    }
-  
-    .movie-title {
-      font-size: 2rem;
-    }
-  
-    .movie-metadata {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .movie-details-page {
+  background-color: 0c1e2c;
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;  
+  position: relative; 
+}
+
+.back-button {
+  background-color: black;
+  z-index: 1000;
+}
+
+.movie-details-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.poster-container {
+  flex: 1;
+  max-width: fit-content;
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.movie-info {
+  flex: 2;
+  padding: 20px; /* Existing padding */
+  margin: 10px; /* Added margin */
+  line-height: 1.6; /* Increase line height for better readability */
+}
+
+.movie-summary {
+  margin: 20px 0;
+  padding: 15px; /* Adding padding inside the summary block */
+  background-color: rgba(255, 255, 255, 0.05); /* Light background color to separate text from the rest of the box */
+  border-radius: 8px; /* So the summary text block has rounded edges */
+}
+
+.movie-metadata {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0; /* Increased margin */
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px; /* Added space below the title */
+}
+
+.movie-rating {
+  background-color: #79d70f;
+  color: black;
+  padding: 10px 15px; /* Increased padding for the rating circle */
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px; /* Adding space below the rating */
+}
+
+
+.movie-release-date,
+.movie-genre,
+.movie-duration {
+  font-size: 1rem;
+}
+
+.movie-summary {
+  margin: 20px 0;
+}
+
+.movie-credits {
+  margin-top: 20px;
+}
+
+.movie-credits h4 {
+  margin: 5px 0;
+}
+
+.movie-credits p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .movie-details-page {
       padding: 15px;
     }
-  
-    .movie-title {
-      font-size: 1.8rem;
-    }
-  
-    .movie-metadata {
-      gap: 8px;
-    }
-  
-    .movie-rating {
-      font-size: 1rem;
-      padding: 5px;
-    }
+  .movie-details-content {
+    flex-direction: column;
+    align-items: center
   }
-  
+
+  .poster-container {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .movie-poster {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .movie-info {
+    padding: 20px 0;
+  }
+
+  .movie-title {
+    font-size: 2rem;
+  }
+
+  .movie-metadata {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .movie-details-page {
+    padding: 15px;
+  }
+
+  .movie-title {
+    font-size: 1.8rem;
+  }
+
+  .movie-metadata {
+    gap: 8px;
+  }
+
+  .movie-rating {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}

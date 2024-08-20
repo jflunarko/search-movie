@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   const search = async () => {
-    if (searchQuery.length > 3) {
+    if (searchQuery.length >= 3) {
       const query = await searchMovie(searchQuery);
       if (query.results.length === 0) {
         setNotFound(true); // If no movies are found, set notFound to true
@@ -35,7 +35,7 @@ const Home = () => {
 
   const PopularMovieList = () => {
     if (notFound) {
-      return <h2 className="text-center mt-5">Movie not found</h2>; // Display "Movie not found" message
+      return <h2 className="text-center mt-5" style={{ width: "100%" }}>Movie not found</h2>;
     }
 
     return (
@@ -43,7 +43,7 @@ const Home = () => {
         {popularMovies.map((movie, i) => (
           <div key={i} className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
             <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://th.bing.com/th?id=OIP.F4eiZn0Wjgp4EFtocph2BAHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2'}
               className="movie-poster"
               alt={movie.title}
             />
@@ -63,7 +63,8 @@ const Home = () => {
   return (
     <div className="App text-center">
       <header className="App-header">
-        <div className="header-background"></div>
+        <div className='parent'>
+        <div className="header-section">
         <div className="container">
           <h1>Selamat datang</h1>
           <p>Millions of movies, TV shows and people to discover. Explore now.</p>
@@ -84,12 +85,17 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
         <div className="trending-section">
           <h2>Trending</h2>
           <div className="scroll-container">
             <PopularMovieList />
           </div>
         </div>
+
+        </div>
+  
       </header>
     </div>
   );

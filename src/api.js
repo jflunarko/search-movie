@@ -15,3 +15,8 @@ export const getMovieById = async (movieId) => {
     const movie = await axios.get(`${process.env.REACT_APP_BASEURL}/movie/${movieId}?&api_key=${process.env.REACT_APP_APIKEY}`);
     return movie.data;
 }
+
+export const getTopRatedMovies = async() => {
+    const topRated = await axios.get(`${process.env.REACT_APP_BASEURL}/movie/top_rated?language=en-US&page=1&api_key=${process.env.REACT_APP_APIKEY}`)
+    return topRated.data.results;
+}

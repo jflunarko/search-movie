@@ -75,7 +75,7 @@ p {
 .Movie-container {
   display: grid;
   grid-auto-flow: column;
-  overflow-x: auto; /* Scroll horizontal hanya pada kontainer ini */
+  overflow-x: auto; 
   overflow-y: hidden; /* Mencegah scroll vertikal */
   scroll-behavior: smooth;
   outline: none; /* Menonaktifkan outline saat fokus */
@@ -204,3 +204,8 @@ h2 {
     font-size: 0.7rem;
   }
 }
+
+.top-rated-section {
+  padding: 20px;
+}
+
